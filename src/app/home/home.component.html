@@ -13,11 +13,11 @@
         </tr>
         <tr *ngFor="let trai of traicay2; let i = index">
           <td>{{i+1}}</td>
-          <td>{{trai.ten}}</td>
-          <td class="right" [ngClass]="trai.gia < 0 ? 'soam':'soduong'">{{trai.gia}}</td>
-          <td class="right" [ngClass]="{soam: trai.gia < 0}">{{trai.gia}}</td>
+          <td>{{trai.ten | uppercase}}</td>
+          <td class="right" [ngClass]="trai.gia < 0 ? 'soam':'soduong'">{{trai.gia | currency: "USD"}}</td>
+          <td class="right" [ngClass]="{soam: trai.gia < 0}">{{trai.gia | currency: "VND"}}</td>
           <td >
-              <span *ngIf="trai.giamgia">Giảm  Giá</span>
+              <span>{{trai.giamgia | onSale | uppercase}}</span>
           </td>
         </tr>
       </table>

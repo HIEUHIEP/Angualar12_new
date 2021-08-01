@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { WordcountPipe } from './wordcount.pipe';
+import { OnSalePipe } from './on-sale.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    WordcountPipe,
+    OnSalePipe
   ],
   imports: [
     BrowserModule,

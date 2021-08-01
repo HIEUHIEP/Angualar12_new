@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   public traicay = ['tao','nho','xoai'];
   public traicay2 = [
     {ten: 'táo', gia: 10,   giamgia: true},
-    {ten: 'nho', gia: -15,  giamgia: false},
+    {ten: 'nho', gia: 5,  giamgia: false},
     {ten: 'xoài',gia: 20,   giamgia: false},
     {ten: 'ổi',  gia: -115, giamgia: true}
   ];
