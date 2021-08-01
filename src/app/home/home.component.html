@@ -1,5 +1,24 @@
 <div>
-    <div *ngFor="let trai of traicay; let i = index">
+   <div *ngFor="let trai of traicay; let i = index">
         <li>{{i+1}} : {{trai}}</li>
-    </div>
+    </div> 
+    <br>
+    <table id="table">
+        <tr>
+          <th>Thứ tự</th>
+          <th>Tên</th>
+          <th>Giá</th>
+          <th>Giá 2</th>
+          <th>Giảm  Giá</th>
+        </tr>
+        <tr *ngFor="let trai of traicay2; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{trai.ten}}</td>
+          <td class="right" [ngClass]="trai.gia < 0 ? 'soam':'soduong'">{{trai.gia}}</td>
+          <td class="right" [ngClass]="{soam: trai.gia < 0}">{{trai.gia}}</td>
+          <td >
+              <span *ngIf="trai.giamgia">Giảm  Giá</span>
+          </td>
+        </tr>
+      </table>
 </div>
