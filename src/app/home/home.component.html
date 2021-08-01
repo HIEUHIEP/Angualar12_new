@@ -1,6 +1,24 @@
+<div>
 <p>home works!</p>
 <h2>Chào bạn {{ name }}</h2>
 <input value ="{{ name }}" />
 <input [value]="name" /><br>
 <input [value]="name" title="'Tôi là ' + name"/><br>
-<input [value]="name" [title]="'Tôi là ' + name"/>
+<input [value]="name" [title]="'Tôi là ' + name"/><br>
+---------------- Binding *ngIf
+<h3 *ngIf="age > 18 && name=='Hiep1'">Đã già</h3>
+<h3 *ngIf="age <= 18 && name=='Hiep'">Còn trẻ</h3><br>
+----------------
+<br>
+<input type="text" [(ngModel)]="name" />
+<h2>Chào bạn {{ name }}</h2>
+<button (click)="resetname()">Reset tên</button>
+<br>
+---------------- NG-template
+<br>
+<input type="text" [(ngModel)]="age" />
+<div *ngIf="age <= 18 then tre else gia"></div>
+<ng-template #gia><h3>Đã già</h3></ng-template>
+<ng-template #tre><h3>Còn trẻ</h3></ng-template>
+<br>
+</div>
